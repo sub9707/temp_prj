@@ -1,0 +1,32 @@
+@import "./reset.css";
+
+.navContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 13%;
+  // border: 1px solid #ffffff;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5%;
+  & .logo {
+    margin-left: 2%;
+    height: 120%;
+    cursor: pointer;
+    filter: invert(100%);
+  }
+  & .menuContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+    justify-content: flex-end;
+    width: 100%;
+    & .notiIcon {
+      display: flex;
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+}
