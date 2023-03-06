@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./BodyContainer.module.scss";
 import VideoSrc from "./assets/Longvinter.mp4";
+import BackSrc from "./assets/spaceback.jpg";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 export function BodyContainer() {
   return (
@@ -26,8 +28,19 @@ export function BodyContainer() {
             </button>
           </div>
         </div>
+        <div className={styles.scrollDown}>
+          <KeyboardDoubleArrowDownIcon
+            fontSize="large"
+            className={styles.arrow}
+          />
+          <p>Scroll Down for Detail!</p>
+          <KeyboardDoubleArrowDownIcon
+            fontSize="large"
+            className={styles.arrow}
+          />
+        </div>
       </div>
-      <div className={styles.scrollDown}>Scroll Down for Detail!</div>
+      <img className={styles.backImg} src={BackSrc} alt="back" />
     </div>
   );
 }

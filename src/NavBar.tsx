@@ -5,11 +5,14 @@ import SearchBox from "./SearchBox";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { NavLink } from "react-router-dom";
 
 export function NavBar() {
   return (
     <div className={styles.navContainer}>
-      <img className={styles.logo} src={Logo} alt="logoImg" />
+      <NavLink to="/">
+        <img className={styles.logo} src={Logo} alt="logoImg" />
+      </NavLink>
       <div className={styles.menuContainer}>
         <SearchBox />
         <NotificationsIcon
@@ -26,6 +29,7 @@ export function NavBar() {
             marginRight: "1.5%",
             fontSize: "3.5rem",
           }}
+          className={styles.account}
         />
         <MenuIcon sx={{ color: "white", cursor: "pointer" }} fontSize="large" />
       </div>

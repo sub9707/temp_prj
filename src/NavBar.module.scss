@@ -9,12 +9,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5%;
+  padding-top: 2%;
+  z-index: 999;
   & .logo {
-    margin-left: 2%;
-    height: 120%;
+    width: 10em;
+    margin-left: 2em;
+    height: auto;
     cursor: pointer;
     filter: invert(100%);
+
+    @media (max-width: 700px) {
+      width: 8em;
+    }
+    @media (max-width: 500px) {
+      width: 5em;
+    }
   }
   & .menuContainer {
     display: flex;
@@ -24,7 +33,13 @@
     width: 100%;
     & .notiIcon {
       display: flex;
-      @media (max-width: 400px) {
+      @media (max-width: 450px) {
+        display: none;
+      }
+    }
+    & .account {
+      display: flex;
+      @media (max-width: 500px) {
         display: none;
       }
     }
