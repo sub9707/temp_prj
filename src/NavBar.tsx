@@ -29,7 +29,11 @@ export function NavBar() {
   useEffect(() => {
     if (menuBar.current !== null && menuBarContent.current !== null) {
       if (sideToggle) {
-        menuBar.current.style.width = "20%";
+        if (window.innerWidth < 600) {
+          menuBar.current.style.width = "90%";
+        } else {
+          menuBar.current.style.width = "20%";
+        }
         menuBarContent.current.style.opacity = "1";
       } else {
         menuBar.current.style.width = "0%";
